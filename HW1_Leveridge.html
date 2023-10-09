@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title> Edward Leveridge</title>
+
+<head>
+    <style>
+        #wrapper{
+            display: table;
+            position: absolute;
+            width: 900px;
+            height: 600px;
+            background-color: bisque;
+        }
+        
+        .Head {
+            display: table-row;
+            position: relative;
+            width: 100%;
+            height: 200px;
+        }
+        
+        #image1{
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            bottom: 10px;
+            left: 10px;
+
+        }
+        .Name{
+            position: absolute;
+            font-size: larger;
+            color: red;
+            bottom: 10px;
+            right: 10px;
+            left: 170px;
+            padding: 1%;
+        }
+        
+        .Nav{
+            display: table-row;
+            position: absolute;
+            padding-left: 2%;
+            height: 20px;
+            max-width: 100%;
+            min-width: 98%;
+        }
+
+        .navCell{
+            display: table-cell;
+            position: relative;
+            float: left;
+            width: auto;
+            padding-right: 5%;
+        }
+
+        .bottom{
+            position: relative;
+            height: 375px;
+            top: 20px;
+            padding-top: 5px;
+        }
+
+        .Menu{
+            position: relative;
+            max-height: 98%;
+            width: 28%;
+            padding-top: 2%;
+            float: left;
+        }
+
+        .menuCell{
+            padding: 5%;
+            width: 95%;
+        }
+
+        .Content{
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 70%;
+            text-indent: 25px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <div class="Head">
+                
+                <img src="Img/me.jpg" alt="Me" id="image1"/>
+                <div class="Name"> Edward Leveridge</div>     
+        </div>
+        <div class="Nav">
+            <div class="navCell"> Skills</div>
+            <div class="navCell"> Work Experiences</div>
+            <div class="navCell"> Interests</div>
+        </div>
+        <div class="bottom">
+            <div class="Menu">
+                <div class="menuCell"> Programming</div>
+                <div class="menuCell"> Applications</div>
+                <div class="menuCell"> Soft Skills</div>
+            </div>
+            <div class="Content">
+                I have experience with C/C++, Python, HTML, CSS, Assembly 
+                and SQL. I have used these languages in a number of 
+                projects ranging from creating Object-Oriented programs 
+                for class to creating large scale Data Science projects.
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
