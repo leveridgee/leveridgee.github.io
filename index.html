@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <script language="JavaScript" type="text/javascript" src="js/jquery.3.7.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="js/script.js"></script>
+    
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div class="Head">
+
+            <img src="Img/me.jpg" alt="Me" id="image1" />
+            <div class="Name">Edward Leveridge</div>
+        </div>
+
+        <div class="nav-menu">
+            <div class="tab-cell" onclick="openMainTab('skills')">Skills</div>
+            <div class="tab-cell" onclick="openMainTab('work')">Work Experiences</div>
+            <div class="tab-cell" onclick="openMainTab('interests')">Interests</div>
+        </div>
+
+        <div class="bottom">
+            <div class="main-tab-content" id="skills-content">
+                <div class="sub-nav">
+                    <div class="sub-tab" onclick="openSubTab('programming')">Programming</div>
+                    <div class="sub-tab" onclick="openSubTab('applications')">Applications</div>
+                    <div class="sub-tab" onclick="openSubTab('softskills')">Soft Skills</div>
+                </div>
+
+                <div class="sub-tab-content" id="programming-content">
+                    <p>
+                        I have experience with C/C++, Python, HTML, CSS, Assembly 
+                        and SQL. I have used these languages in a number of 
+                        projects ranging from creating Object-Oriented programs 
+                        for class to creating large scale Data Science projects.
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="applications-content" style="display: none;">
+                    <p>
+                        I have experience using Splunk, a data logging system often used by
+                        large companies. I also have experience with Spunk Enterprise
+                        Security, an add on to Splunk that turns it inot a security software 
+                        solution. I also have expereince with GitHub, Docker, and Ironscales.
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="softskills-content" style="display: none;">
+                    <p>
+                        I am skilled at problem solving, public speaking, leadership skills, 
+                        and self motivation. I learn quickly and always but my everything into 
+                        any project I am working on.
+                    </p>
+                </div>
+
+                
+            </div>
+
+            <div class="main-tab-content" id="work-content" style="display: none;">
+                <div class="sub-nav">
+                    <div class="sub-tab" onclick="openSubTab('MISO')">MISO</div>
+                    <div class="sub-tab" onclick="openSubTab('Uindy')">Uindy</div>
+                    <div class="sub-tab" onclick="openSubTab('IT')">IT</div>
+                    <div class="sub-tab" onclick="openSubTab('projects')">Projects</div>
+                    <div class="sub-tab" onclick="openSubTab('api')">Api</div>
+                </div>
+
+                <div class="sub-tab-content" id="MISO-content">
+                    <p>
+                        Cybersecurity Intern / MISO Energy Group / May 2023 - August 2023
+                    </p>
+                    <p>
+                        Gained an understanding of cybersecurity infrastructure
+                        Conducted investigations using a variety of cybersecurity tools
+                        Managed events, data, and dashboards in Splunk Enterprise Security
+
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="Uindy-content" style="display: none;">
+                    <p>
+                        Events Staff AV Intern / University of Indianapolis / January 2022 – May 2023
+                    </p>
+                    <p>
+                        Managed large-scale events and necessary equipment
+                        Led teams to cater customer needs and expectations
+                        Conducted large scale inventory managerial duties
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="IT-content" style="display: none;">
+                    <p>
+                        IT Intern / Servant42 / May 2022 - August 2022
+                    </p>
+                    <p>
+                        Assisted in varied problem solving with IT- related problems
+                        Worked with customers to establish needs and find solutions
+                        Managed large supplies of hardware and devices
+
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="projects-content">
+                    <p>To see examples of JavaScript events, either click the button, 
+                        hover over it, or press a key while this page is selected:</p>
+                    <button id="clickBtn">Click Me</button>
+                    <button id="dynBtn">Focus Me</button>
+                    <div id="output"></div>
+                </div>
+
+                <div class="sub-tab-content" id="api-content" style="display: none;">
+                    <button id="apiBtn">API Call</button>
+                    <div id="output2"></div>
+                </div>
+            </div>
+
+            <div class="main-tab-content" id="interests-content" style="display: none;">
+                <div class="sub-nav">
+                    <div class="sub-tab" onclick="openSubTab('Gaming')">Gaming</div>
+                    <div class="sub-tab" onclick="openSubTab('Reading')">Reading</div>
+                    <div class="sub-tab" onclick="openSubTab('DND')">DND</div>
+                </div>
+
+                <div class="sub-tab-content" id="Gaming-content">
+                    <p>
+                        One of my favorite hobbies is playing video games. I like all kinds of 
+                        games, but my favorite kinds of games are Indie games and Strategy games.
+                        My favorite and most played videogames are: Rimworld, Civ 5 and Civ 6, 
+                        Total War: Rome 2, Total War: Warhammer, Risk of Rain 2, Slay the Spire, 
+                        Stellaris, and XCOM 2
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="Reading-content" style="display: none;">
+                    <p>
+                        I really enjoy reading. While I have not been able to read much recently 
+                        because of how busy I am, it is still one of my favorite hobbies. My favorite book 
+                        is Frankenstein by Mary Shelly, followed by The Wolf by Leo Carew. I like fantasy
+                        books, books about history, horror novels, and poetry. 
+                    </p>
+                </div>
+                <div class="sub-tab-content" id="DND-content" style="display: none;">
+                    <p>
+                        Playing Dungeons and Dragons with my friends is something I always enjoy doing.
+                        I am usually the GM, or Game Master, who is the person in charge of running
+                        the game, as well as remembering all the rules and helping guide
+                        the players.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+
+</html>
