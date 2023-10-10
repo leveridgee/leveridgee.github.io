@@ -102,6 +102,10 @@
     border-color: #4CAF50; 
     color: white;
 }
+#output {
+    padding: 10px;
+    border: 10px;
+}
 
 @media screen and (max-width: 768px) {
     #wrapper{
