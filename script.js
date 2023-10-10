@@ -23,6 +23,9 @@ function openSubTab(subTabName) {
     if (subTabName === 'projects') {
         initializeEvents();
     }
+    else if (subTabName === 'api') {
+        initializeApi();
+    }
 }
 
 function initializeEvents() {
@@ -54,24 +57,32 @@ function initializeEvents() {
     dynBtn.addEventListener("blur", function() {
         output.innerHTML = "The Dynamic button was blurred";
     });
+
 }
 
-    var apiBtn = document.getElementById("apiBtn");
-    var apiOutput = document.getElementById("apiOutput");
+function initializeApi() {
 
+    console.log("Here");
+    var apiBtn = document.getElementById("apiBtn");
+    var output2 = document.getElementById("output2");
+    
     apiBtn.addEventListener("click", function() {
-        fetch('http://35.188.215.266:8000/my_program', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'name=YourName&program=all' // You can change 'all' to 'cs', 'se', or 'me' based on your requirement
-        })
-        .then(response => response.json())
-        .then(data => {
-            apiOutput.innerHTML = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-            apiOutput.innerHTML = "Error: " + error.message;
-        });
+        $.post("http://35.188.215.226:8000/my_program",{"name":"Edward", "program":"cs"},post_back)
     });
+
+    function post_back(data, status){
+        console.log("Post status");
+        console.log(status);
+        console.log("Post data");
+        console.log(data);
+        console.log(data["name"]);
+        output2.innerHTML+= "Here are the current CS Classes: "
+        let i = 0;
+        for (i; i < data["Course"].length - 1; i++){
+            output2.innerHTML += data["Course"][i] + ", ";
+        }
+        output2.innerHTML += data["Course"][i] + ". ";
+        
+    }
+}
+
