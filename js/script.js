@@ -26,12 +26,17 @@ function openSubTab(subTabName) {
 }
 
 function initializeEvents() {
+    let ct = 0;
     var clickBtn = document.getElementById("clickBtn");
     var dynBtn = document.getElementById("dynBtn");
     var output = document.getElementById("output");
+    var counter = document.getElementById("counter");
 
     document.addEventListener("keydown", function(event) {
         output.innerHTML = "You pressed this key: " + event.key;
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
+        
     });
 
     clickBtn.addEventListener("click", function() {
@@ -39,24 +44,37 @@ function initializeEvents() {
         var img = document.createElement("img");
         img.src = "Img/me.jpg";
         output.appendChild(img);
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
     });
 
     clickBtn.addEventListener("mouseover", function() {
         output.innerHTML = "Button is being hovered over";
         output.style.color = "red"; 
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
+        
     });
 
     clickBtn.addEventListener("mouseout", function() {
         output.innerHTML = "Button is not being hovered over";
         output.style.color = ""; 
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
     });    
 
     dynBtn.addEventListener("focus", function() {
         output.innerHTML = "The Dynamic button is in focus";
+        dynBtn.style.backgroundColor = "green";
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
     });
 
     dynBtn.addEventListener("blur", function() {
         output.innerHTML = "The Dynamic button was blurred";
+        dynBtn.style.backgroundColor = "blue";
+        ct+=1;
+        counter.innerHTML = "Things Done: " + ct;
     });
 
 }
