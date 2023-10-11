@@ -18,6 +18,8 @@ function openSubTab(subTabName) {
     document.getElementById(subTabName + "-content").style.display = "block";
 
     if (subTabName === 'projects') {
+        var counter = document.getElementById("counter");
+        counter.innerHTML = "Things Done: " + 0;
         initializeEvents();
     }
     else if (subTabName === 'api') {
@@ -81,7 +83,7 @@ function initializeEvents() {
 
 function initializeApi() {
 
-    console.log("Here");
+    //console.log("Here");
     var apiBtn = document.getElementById("apiBtn");
     var output2 = document.getElementById("output2");
     
